@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		/* Contenedor principal */
+.layout {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en fila */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+/* Menú lateral */
+.menu-lateral {
+    width: 250px; /* Ancho fijo */
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Scroll si el contenido es muy largo */
+    position: fixed; /* Fijo en el lado izquierdo */
+    top: 0;
+    left: 0;
+    height: 100%; /* Altura completa */
+}
+
+/* Lista del menú */
+.menu-lateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu-lateral li {
+    margin: 0;
+}
+
+.menu-lateral a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-lateral a:hover {
+    background-color: #0073e6;
+    color: white;
+}
+
+/* Contenedor derecho */
+.contenedor-derecho {
+    margin-left: 250px; /* Espacio igual al ancho del menú lateral */
+    width: calc(100% - 250px); /* Se ajusta al espacio restante */
+    display: flex;
+    flex-direction: column; /* Contenido apilado verticalmente */
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex-grow: 1; /* Ocupa todo el espacio restante vertical */
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto; /* Scroll vertical si el contenido es muy largo */
+}
+
+.contenido-principal h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contenido-principal p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+	</style>
+</head>
+<body>
+	<div class="layout">
+    <nav class="menu-lateral">
+        <ul>
+            <li><a href="#resiliencia">Resiliencia</a></li>
+            <li><a href="#emociones">Emociones</a></li>
+            <li><a href="#IA">IA & Resiliencia</a></li>
+            <li><a href="#Estres">El estrés y su impacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-derecho">
+        <header class="encabezado">
+            <h1>Encabezado Principal</h1>
+        </header>
+        <main class="contenido-principal">
+            <h2>Bienvenido</h2>
+            <p>Este es el contenido principal que se ajustará en su propio contenedor independiente del menú lateral.</p>
+            <p>Añade más contenido aquí...</p>
+        </main>
+    </div>
+</div>
+
+</body>
+</html>
