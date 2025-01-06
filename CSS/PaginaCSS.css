@@ -1,0 +1,450 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #003366, #1a1a80);
+    color: #f0f8ff;
+    padding: 0;
+    transition: background 0.5s ease;
+    line-height: 1.6;
+}
+
+/* Títulos centrados */
+.main-header, .section h2, .example h4 {
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    text-align: center;
+}
+
+/* Header */
+.main-header {
+    background: linear-gradient(90deg, #0044cc, #8000ff);
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 15px #ffffff, 0 0 25px #0044cc;
+    }
+    50% {
+        text-shadow: 0 0 25px #ffffff, 0 0 40px #8000ff;
+    }
+}
+
+/* Main Content */
+.content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Sections */
+.section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-15px);
+    background: rgba(0, 0, 139, 0.2);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.section h2 {
+    border-bottom: 2px solid #00bfff;
+    padding-bottom: 12px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #00bfff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Info Section */
+.info h3 {
+    color: #87cefa;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Examples */
+.examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.example {
+    background: rgba(0, 0, 139, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.example:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 139, 0.7);
+    background: rgba(0, 191, 255, 0.2);
+}
+
+.example h4 {
+    color: #4682b4;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.example p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f0f8ff;
+    text-align: justify;
+}
+
+/* Imágenes más pequeñas */
+.example img {
+    width: 85%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.example img:hover {
+    transform: scale(1.05);
+    border-color: #00bfff;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background: #1a1a80;
+    text-align: center;
+    padding: 25px;
+    font-size: 1rem;
+    color: #f0f8ff;
+    border-top: 3px solid #0044cc;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);
+    animation: fade-in 2s ease;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Botones */
+button {
+    background-color: #0044cc;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #8000ff;
+    transform: translateY(-3px);
+}
+
+/* Animaciones */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.examples .example:hover img {
+    animation: bounce 0.5s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+
+    .example {
+        padding: 15px;
+    }
+
+    .example img {
+        width: 90%;
+        max-height: 120px;
+    }
+
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .example h4 {
+        font-size: 1.2rem;
+    }
+
+    .example img {
+        width: 95%;
+        max-height: 100px;
+    }
+}
+
+figure {
+    text-align: center;
+    margin-top: 30px;
+}
+
+figure img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 15px;
+    color: #666;
+}
+
+ul {
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4DD0E1; /* Azul turquesa */
+    font-size: 1.5rem;
+}
+
+.menu-lateral {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px; /* Reducción del tamaño del menú */
+    background: linear-gradient(135deg, #1E90FF, #00BFFF); /* Gradiente azul brillante */
+    border-right: 2px solid #4682B4; /* Borde azul oscuro */
+    height: 100%; /* Se ajusta a la altura completa de la ventana */
+    position: fixed; /* Fijo al lado izquierdo de la pantalla */
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* Oculta el scroll horizontal si es necesario */
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2); /* Sombra suave para darle profundidad */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    margin-top: 93px;
+}
+
+/* Estilo para los elementos de la lista */
+.menu-lateral li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los enlaces */
+.menu-lateral a {
+    display: block; /* Ocupa todo el ancho del contenedor */
+    color: #FFFFFF; /* Texto blanco */
+    text-decoration: none;
+    padding: 16px 20px; /* Espaciado reducido */
+    font-size: 16px;
+    font-weight: 500; /* Texto ligeramente en negrita */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease; /* Efecto suave */
+}
+
+/* Efecto hover en los enlaces */
+.menu-lateral a:hover {
+    background-color: #4682B4; /* Azul más oscuro para el hover */
+    color: white;
+    padding-left: 30px; /* Desplazar el texto hacia la derecha */
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3); /* Sombra extra al pasar el ratón */
+}
+
+/* Enlace activo (opcional) */
+.menu-lateral a:active {
+    background-color: #5F9EA0; /* Azul verdoso para el enlace activo */
+    color: white;
+    box-shadow: inset 2px 0 8px rgba(0, 0, 0, 0.3); /* Sombra interna para mayor énfasis */
+}
+
+
+/* Estilo opcional para móviles */
+@media screen and (max-width: 768px) {
+    .menu-lateral {
+        width: 200px;
+    }
+
+    .menu-lateral a {
+        font-size: 14px;
+    }
+}
+
+/* Contenedor general */
+.contenedor {
+    display: flex;
+    flex-direction: row; /* Los elementos hijos se colocan en una fila */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+/* Menú lateral (ya definido anteriormente) */
+.menu-lateral {
+    width: auto; /* Ancho fijo para el menú lateral */
+    flex-shrink: 0; /* Evita que el menú lateral cambie de tamaño */
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex-grow: 1; /* Ocupa todo el espacio restante vertical */
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto; 
+    margin-left: 250px; 
+    padding-top: 60px;/* Scroll vertical si el contenido es muy largo */
+}
+
+.contenedor-derecho {
+    margin-left: auto; /* Espacio igual al ancho del menú lateral */
+    width: calc(100% - 180px); /* Se ajusta al espacio restante */
+    display: flex;
+    flex-direction: column; /* Contenido apilado verticalmente */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #00BFFF, #1E90FF); /* Gradiente de azul brillante */
+    color: #FFF;
+    padding: 10px 30px; /* Reducción del tamaño del padding */
+    z-index: 10;
+    font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+    font-size: 22px; /* Reducir el tamaño de la fuente */
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px; /* Espaciado de letras para hacerlo más elegante */
+    border-bottom: 4px solid #4682B4; /* Borde en un azul más oscuro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra fuerte para destacar el encabezado */
+    transition: all 0.3s ease-in-out; /* Transición suave para los cambios */
+}
+
+header:hover {
+    background: linear-gradient(45deg, #1E90FF, #00BFFF); /* Cambio de gradiente al pasar el ratón */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Sombra más intensa en hover */
+    transform: translateY(-5px); /* Levantar el encabezado al pasar el ratón */
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 50px;
+  background-color: #001f3f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top:   25px;
+  border-radius:  15px;
+
+}
+
+.navbar-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 8px 12px;
+  position: relative;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #7FDBFF;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #7FDBFF;
+}
+
+.navbar-menu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+}
+
+
+

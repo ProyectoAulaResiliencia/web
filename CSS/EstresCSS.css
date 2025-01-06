@@ -1,0 +1,244 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../Imagenes/Relajado.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #E0F7FA; /* Azul celeste claro */
+    line-height: 1.6;
+    padding: 0 20px;
+    font-size: 16px;
+    overflow-x: hidden;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    background-color: rgba(0, 65, 72, 0.7); /* Verde azulado con transparencia */
+    color: #B2EBF2; /* Azul claro tenue */
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+header:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 90, 100, 0.9); /* Verde azulado más opaco */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header em {
+    font-size: 1.5rem;
+    color: #80DEEA; /* Azul aguamarina */
+}
+
+/* Secciones */
+section {
+    padding: 30px;
+    margin: 20px 0;
+    background-color: rgba(0, 77, 87, 0.7); /* Verde azulado profundo con transparencia */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #4DD0E1; /* Azul turquesa */
+    text-align: center;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #E0F7FA; /* Azul celeste claro */
+}
+
+/* Lista de niveles de estrés */
+ul {
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4DD0E1; /* Azul turquesa */
+    font-size: 1.5rem;
+}
+
+/* Imágenes */
+figure {
+    text-align: center;
+    margin-top: 30px;
+}
+
+figure img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 15px;
+    color: #666;
+}
+
+/* Galería de imágenes */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.image-item {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+    transform: scale(1.1);
+}
+
+.image-item p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color:  #00a3fe;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo de pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 51, 56, 0.8); /* Verde azulado muy oscuro */
+    color: #B2EBF2; /* Azul claro tenue */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #4DD0E1; /* Azul turquesa */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 2s ease-out;
+}
+
+/* Media Queries para Responsividad */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-item {
+        min-width: 100%;
+    }
+}
+
+/* Estilo de las animaciones de las imágenes de la galería */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Aplicando animación de zoom en las imágenes */
+.image-item img {
+    animation: zoomIn 0.5s ease-out;
+}
+
+p1{
+    color: #39a3ff;
+}

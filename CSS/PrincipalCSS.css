@@ -1,0 +1,189 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00b4d8, #0077b6); /* Degradado de azul turquesa */
+    color: white; /* Texto blanco para contraste */
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* Cabecera */
+header {
+    background: linear-gradient(to right, #00b4d8, #0077b6); /* Degradado de azul */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1.5s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #023e8a; /* Azul oscuro */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00b4d8; /* Azul más brillante para el hover */
+    transform: scale(1.1);
+}
+
+/* Secciones */
+div {
+    padding: 40px;
+    margin: 30px;
+    background: #023e8a; /* Azul oscuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    background: linear-gradient(to right, #023e8a, #0096c7); /* Degradado suave */
+}
+
+div p, div ul {
+    font-size: 20px;
+    text-align: justify;
+}
+
+div h2, div h3 {
+    text-align: center;
+}
+
+/* Títulos */
+h2 {
+    color: #90e0ef; /* Azul claro */
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    color: #f1faee; /* Amarillo suave */
+    font-size: 2em;
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+
+/* Párrafos */
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f0f0f0; /* Color suave para los párrafos */
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #00b4d8; /* Azul brillante para el hover */
+}
+
+/* Listas */
+ul {
+    font-size: 18px;
+    line-height: 1.7;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 15px;
+    list-style-type: square;
+    font-weight: 500;
+    color: #f0f0f0;
+    position: relative;
+    padding-left: 25px;
+    transition: color 0.3s ease;
+}
+
+li:hover {
+    color: #00b4d8; /* Azul brillante para el hover */
+}
+
+/* Resaltado en listas */
+.highlight {
+    color: #90e0ef; /* Azul claro */
+    font-weight: bold;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+.highlight:hover {
+    color: #00b4d8; /* Azul brillante para el hover */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para la accesibilidad y diseño responsivo */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+    }
+
+    div {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    h3 {
+        font-size: 1.7em;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}

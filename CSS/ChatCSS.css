@@ -1,0 +1,294 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light cyan background for a cool vibe */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #00bcd4; /* Teal header for a vibrant look */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 38px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+header:hover {
+    background-color: #0097a7; /* Darker teal on hover */
+    transform: scale(1.05);
+}
+
+.button-style {
+        display: inline-block;
+        background-color: #0097a7; /* Color de fondo del botón */
+        color: #E0E0E0; /* Color del texto */
+        font-size: 30px; /* Tamaño de fuente */
+        font-weight: bold;
+        padding: 10px 20px; /* Espaciado interno */
+        border: none; /* Sin bordes */
+        border-radius: 20px; /* Bordes redondeados */
+        text-align: center;
+        text-decoration: none; /* Sin subrayado */
+        cursor: pointer; /* Cursor de mano */
+        transition: background-color 0.3s ease;
+        margin: 15px; /* Animación suave en hover */
+        }
+
+        .button-style:hover {
+        background-color:#00bcd4 ; /* Color de fondo al pasar el mouse */
+        }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Card-style divs */
+div {
+    background: #ffffff;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Headers */
+h2 {
+    font-size: 26px;
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 4px solid #00bcd4;
+    padding-bottom: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #00796b; /* Darker teal on hover */
+}
+
+/* Unordered List Styles */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    background-color: #b2ebf2; /* Light cyan for the background of lists */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+li {
+    margin-bottom: 18px;
+    font-size: 18px;
+    color: #555;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #00bcd4; /* Vibrant cyan on hover */
+    color: white;
+}
+
+/* Anchor Link Styles */
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #00796b; /* Darker cyan on hover */
+}
+
+/* Image Styles */
+/* Imagen con Efectos Adicionales */
+
+/* Efecto de zoom y sombra para imágenes */
+img {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease;
+    filter: brightness(90%); /* Slightly dim the image initially */
+}
+
+/* Efecto de zoom cuando el cursor pasa por encima */
+img:hover {
+    transform: scale(1.1); /* Zoom out slightly to make the image pop */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    filter: brightness(100%); /* Restore brightness on hover */
+}
+
+/* Efecto de imagen en movimiento: mover la imagen cuando se hace hover */
+img:hover {
+    transform: scale(1.1) translateY(-10px); /* Image zooms and moves upwards */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+}
+
+/* Efecto de imagen en negro y blanco */
+img.grayscale {
+    filter: grayscale(100%); /* Convert image to grayscale */
+    transition: filter 0.3s ease;
+}
+
+/* Efecto de imagen en color al pasar el ratón por encima */
+img.grayscale:hover {
+    filter: grayscale(0%); /* Restore full color on hover */
+}
+
+/* Imágenes con bordes y sombras */
+img.border-shadow {
+    border: 4px solid #00bcd4; /* Border color */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: all 0.3s ease;
+}
+
+img.border-shadow:hover {
+    border-color: #00796b; /* Darker border color on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Efecto de imagen con borde redondeado */
+img.rounded-corner {
+    border-radius: 20px; /* Makes the corners of the image more rounded */
+    transition: border-radius 0.3s ease, transform 0.3s ease;
+}
+
+img.rounded-corner:hover {
+    border-radius: 50%; /* Make the image fully round on hover */
+    transform: rotate(10deg); /* Rotate the image slightly on hover */
+}
+
+/* Efecto de imagen flotante */
+img.floating {
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Subtle floating effect */
+}
+
+img.floating:hover {
+    transform: translateY(-15px); /* Moves image upwards when hovered */
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2); /* Stronger shadow for floating effect */
+}
+
+/* Efecto de desenfoque en imagen */
+img.blur-effect {
+    filter: blur(5px); /* Slight blur effect */
+    transition: filter 0.3s ease;
+}
+
+img.blur-effect:hover {
+    filter: blur(0); /* Remove blur on hover */
+}
+
+/* Imagen con marco y sombra */
+img.frame-shadow {
+    border: 6px solid #4CAF50; /* Green border */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+img.frame-shadow:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    border-color: #2e8b57; /* Darker green border on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #00bcd4;
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Button Styles */
+button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 18px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #00796b; /* Darker teal on hover */
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    div {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    ul {
+        padding: 15px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+
