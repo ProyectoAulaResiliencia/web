@@ -21,21 +21,34 @@ h1, h2, h3, h4 {
 }
 
 /* Header */
-.main-header {
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: linear-gradient(90deg, #0044cc, #8000ff);
     color: #ffffff;
-    padding: 30px;
-    text-align: center;
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
 }
 
-.main-header h1 {
-    font-size: 3rem;
+header h1 {
+    font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    text-align: center;
+    flex-grow: 1; /* Para que el título ocupe el espacio central */
+    margin: 0; /* Elimina márgenes por defecto */
     animation: pulse 2s infinite;
 }
+
+header img {
+    height: 90px ; /* Ajusta la altura de las imágenes */
+    width: auto; /* Mantén la proporción de las imágenes */
+    margin: 0px 60px;
+}
+
+
 
 @keyframes pulse {
     0%, 100% {
@@ -202,37 +215,46 @@ button:hover {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
-    .content {
-        padding: 20px;
+@media (min-width: 768px) {
+    .layout {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-lateral {
+        flex: 1;
+        max-width: 200px;
+    }
+
+    .contenedor-derecho {
+        flex: 3;
+    }
+
+    .examples {
+        gap: 30px;
     }
 
     .example {
-        padding: 15px;
-    }
-
-    .example img {
-        width: 90%;
-        max-height: 120px;
-    }
-
-    .main-header h1 {
-        font-size: 2.5rem;
+        flex: 1 1 calc(50% - 30px);
     }
 }
 
-@media (max-width: 480px) {
-    .section h2 {
-        font-size: 1.8rem;
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .example h4 {
-        font-size: 1.2rem;
+    .examples {
+        gap: 10px;
     }
 
-    .example img {
-        width: 95%;
-        max-height: 100px;
+    .example {
+        flex: 1 1 calc(100% - 20px);
+    }
+
+    .menu-lateral {
+        display: none; /* Hide sidebar menu for mobile */
     }
 }
 

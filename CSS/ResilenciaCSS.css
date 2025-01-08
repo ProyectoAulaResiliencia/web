@@ -35,6 +35,26 @@ header h1 {
     animation: fadeIn 2s ease-in-out;
 }
 
+.button-style {
+        display: inline-block;
+        background-color: #8a2be2; /* Color de fondo del botón */
+        color: #E0E0E0; /* Color del texto */
+        font-size: 30px; /* Tamaño de fuente */
+        font-weight: bold;
+        padding: 10px 20px; /* Espaciado interno */
+        border: none; /* Sin bordes */
+        border-radius: 20px; /* Bordes redondeados */
+        text-align: center;
+        text-decoration: none; /* Sin subrayado */
+        cursor: pointer; /* Cursor de mano */
+        transition: background-color 0.3s ease;
+        margin: 15px; /* Animación suave en hover */
+        }
+
+    .button-style:hover {
+        background-color:#00bcd4 ; /* Color de fondo al pasar el mouse */
+        }
+
 /* Navigation styles */
 nav ul {
     list-style: none;
