@@ -29,6 +29,7 @@ header {
     border-bottom-right-radius: 50px;
     animation: slideDown 1.5s ease-out;
     position: relative;
+    margin-bottom: 20px;
 }
 
 header h1 {
@@ -57,6 +58,26 @@ header::after {
     left: 0;
     z-index: 1;
 }
+
+.button-style {
+        display: inline-block;
+        background-color: #5e5abf; /* Color de fondo del botón */
+        color: #E0E0E0; /* Color del texto */
+        font-size: 30px; /* Tamaño de fuente */
+        font-weight: bold;
+        padding: 10px 20px; /* Espaciado interno */
+        border: none; /* Sin bordes */
+        border-radius: 20px; /* Bordes redondeados */
+        text-align: center;
+        text-decoration: none; /* Sin subrayado */
+        cursor: pointer; /* Cursor de mano */
+        transition: background-color 0.3s ease;
+        margin: 15px; /* Animación suave en hover */
+        }
+
+    .button-style:hover {
+        background-color:#00bcd4 ; /* Color de fondo al pasar el mouse */
+        }
 
 /* Main */
 main {

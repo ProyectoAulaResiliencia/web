@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -43,7 +43,7 @@ header:hover {
         margin: 15px; /* Animación suave en hover */
         }
 
-        .button-style:hover {
+    .button-style:hover {
         background-color:#00bcd4 ; /* Color de fondo al pasar el mouse */
         }
 
